@@ -31,7 +31,7 @@ angular.module("LaMaceta", ["ui.bootstrap", 'ngTable'])
 	$scope.openEditUserTypeModal = function (user) {
 	    var modalInstance = $modal.open({
 	      animation: true,
-	      templateUrl: '../theme1/edit-usertype-modal.html',
+	      templateUrl: '../theme/edit-usertype-modal.html',
 	      controller: 'EditUserTypeModalCtrl',
 	      resolve: {
 	      }
@@ -48,8 +48,25 @@ angular.module("LaMaceta", ["ui.bootstrap", 'ngTable'])
 	$scope.openProductModal = function (user) {
 	    var modalInstance = $modal.open({
 	      animation: true,
-	      templateUrl: '../theme1/product-modal.html',
+	      templateUrl: '../theme/product-modal.html',
 	      controller: 'ProductModalCtrl',
+	      resolve: {
+	      }
+
+	    }).result.then(function() {
+	    	/*$scope.addresses = [];
+	        AdminService.getAllUsers()
+				.then(function(res){
+						$scope.users = res;
+				})*/
+	    });
+    }
+
+    $scope.openPromotionModal = function (user) {
+	    var modalInstance = $modal.open({
+	      animation: true,
+	      templateUrl: '../theme/promotion-modal.html',
+	      controller: 'PromotionModalCtrl',
 	      resolve: {
 	      }
 
@@ -65,7 +82,7 @@ angular.module("LaMaceta", ["ui.bootstrap", 'ngTable'])
 	$scope.openUserModal = function (user) {
 	    var modalInstance = $modal.open({
 	      animation: true,
-	      templateUrl: '../theme1/user-modal.html',
+	      templateUrl: '../theme/user-modal.html',
 	      controller: 'UserModalCtrl',
 	      resolve: {
 	      }
@@ -82,7 +99,7 @@ angular.module("LaMaceta", ["ui.bootstrap", 'ngTable'])
 	$scope.openDiscountModal = function (user) {
 	    var modalInstance = $modal.open({
 	      animation: true,
-	      templateUrl: '../theme1/discount-modal.html',
+	      templateUrl: '../theme/discount-modal.html',
 	      controller: 'DiscountModalCtrl',
 	      size: 'lg',
 	      resolve: {
@@ -100,7 +117,7 @@ angular.module("LaMaceta", ["ui.bootstrap", 'ngTable'])
 	$scope.openColorModal = function (user) {
 	    var modalInstance = $modal.open({
 	      animation: true,
-	      templateUrl: '../theme1/color-modal.html',
+	      templateUrl: '../theme/color-modal.html',
 	      controller: 'ColorModalCtrl',
 	      resolve: {
 	      }
@@ -117,7 +134,7 @@ angular.module("LaMaceta", ["ui.bootstrap", 'ngTable'])
 	$scope.openSizeModal = function (user) {
 	    var modalInstance = $modal.open({
 	      animation: true,
-	      templateUrl: '../theme1/size-modal.html',
+	      templateUrl: '../theme/size-modal.html',
 	      controller: 'SizeModalCtrl',
 	      resolve: {
 	      }
@@ -134,7 +151,7 @@ angular.module("LaMaceta", ["ui.bootstrap", 'ngTable'])
 	$scope.openShippingCostModal = function (user) {
 	    var modalInstance = $modal.open({
 	      animation: true,
-	      templateUrl: '../theme1/shipping-cost-modal.html',
+	      templateUrl: '../theme/shipping-cost-modal.html',
 	      controller: 'ShippingCostModalCtrl',
 	      resolve: {
 	      }
@@ -151,7 +168,7 @@ angular.module("LaMaceta", ["ui.bootstrap", 'ngTable'])
 	$scope.openProvidersModal = function (user) {
 	    var modalInstance = $modal.open({
 	      animation: true,
-	      templateUrl: '../theme1/providers-modal.html',
+	      templateUrl: '../theme/providers-modal.html',
 	      controller: 'ProvidersModalCtrl',
 	      resolve: {
 	      }
@@ -219,5 +236,9 @@ angular.module('LaMaceta').controller('ShippingCostModalCtrl', function () {
 });
 
 angular.module('LaMaceta').controller('ProvidersModalCtrl', function () {
+
+});
+
+angular.module('LaMaceta').controller('PromotionModalCtrl', function () {
 
 });

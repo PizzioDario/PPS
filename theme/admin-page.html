@@ -171,16 +171,16 @@
               <li class="list-group-item clearfix" ng-click="selectTab('images')"><a href=""><i class="fa fa-angle-right"></i>Imagenes</a></li>
               <li class="list-group-item clearfix" ng-click="selectTab('shippingCost')"><a href=""><i class="fa fa-angle-right"></i>Costo de Envio</a></li>
               <li class="list-group-item clearfix" ng-click="selectTab('providers')"><a href=""><i class="fa fa-angle-right"></i>Proveedores</a></li>
+              <li class="list-group-item clearfix" ng-click="selectTab('promotions')"><a href=""><i class="fa fa-angle-right"></i>Promociones</a></li>
               <li class="list-group-item clearfix" ng-click="selectTab('logout')"><a href=""><i class="fa fa-angle-right"></i>Cerrar Sesion</a></li>
             </ul>
           </div>
           <!-- END SIDEBAR -->
 
       <div class="col-md-9 col-sm-7">
-        <div ng-show="selectedTab=='users'">
+          <div ng-show="selectedTab=='users'">
            <h1>USUARIOS</h1> 
-           <div align="right"><button type="submit" class="btn btn-primary" ng-click="openUserModal()">Agregar Usuario</button></div>
-         </br>
+           <div align="right"><button type="submit" class="btn btn-primary" ng-click="openUserModal()">Agregar Usuario</button></div></br>
             <div class="goods-page">
               <div class="goods-data clearfix">
                 <div class="table-wrapper-responsive">
@@ -225,9 +225,9 @@
                 </table>
                 </div>
               </div>
-            </div>
+          </div>
           </div> <!---ng-show-->  
-        <div ng-show="selectedTab=='products'">
+          <div ng-show="selectedTab=='products'">
             <h1>PRODUCTOS</h1>
             <div align="right"><button type="submit" class="btn btn-primary" ng-click="openProductModal()">Agregar Producto</button></div>
             </br>
@@ -525,7 +525,7 @@
               <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>                   
             </div>
           </div> <!---ng-show--> 
-         <div ng-show="selectedTab=='shippingCost'">
+          <div ng-show="selectedTab=='shippingCost'">
             <h1>COSTO DE ENVIO</h1>
             <div align="right"><button type="submit" class="btn btn-primary" ng-click="openShippingCostModal()">Agregar Costo de Envio</button></div>
             </br>
@@ -554,7 +554,7 @@
               </div>
             </div>
           </div> <!---ng-show-->  
-           <div ng-show="selectedTab=='providers'">
+          <div ng-show="selectedTab=='providers'">
             <h1>PROVEEDORES</h1>
             <div align="right"><button type="submit" class="btn btn-primary" ng-click="openProvidersModal()">Agregar Proveedor</button></div>
             </br>
@@ -582,6 +582,50 @@
                 </div>
               </div>
             </div>
+          </div> <!---ng-show-->
+          <div ng-show="selectedTab=='promotions'">
+            <h1>PROMOCIONES</h1>
+            <div align="right"><button type="submit" class="btn btn-primary" ng-click="openPromotionModal()">Agregar Promoción</button></div>
+            </br>
+            <div class="goods-page">
+              <div class="goods-data clearfix">
+                <div class="table-wrapper-responsive">
+                                <table summary="Shopping cart">
+                  <tr>
+                    <th class="goods-page-description">Banco</th>
+                    <th class="goods-page-description">Tarjeta</th>
+                    <th class="goods-page-description">Desde</th>
+                    <th class="goods-page-description">Hasta</th>
+                    <th class="goods-page-description">Días</th>
+                    <th class="goods-page-price" colspan="2">Porcentaje</th>
+                  </tr>
+                  <tr>
+                    <td class="goods-page-description">
+                       Galicia
+                    </td>
+                    <td class="goods-page-description">
+                      Visa
+                    </td>
+                    <td class="goods-page-description">
+                      01/01/2010
+                    </td>
+                    <td class="goods-page-description">
+                      31/12/2015
+                    </td>
+                    <td class="goods-page-description">
+                      Lunes Jueves Sabado
+                    </td>
+                    <td class="goods-page-price">
+                      <strong><span></span>15.00</strong>
+                    </td>
+                      <td class="del-goods-col">
+                        <a class="del-goods" href="">&nbsp;</a>
+                        <a class="add-goods" href="" ng-click="openEditProductModal(product)">&nbsp;</a>
+                      </td>
+                  </tr>
+                </table>
+                </div>
+              </div>
           </div> <!---ng-show-->  
         </div>        
         </div>
